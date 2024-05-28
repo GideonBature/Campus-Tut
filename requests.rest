@@ -1,0 +1,168 @@
+### Register a new user
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+    "name": "Gideon Bature",
+    "email": "gideon@meyou.com",
+    "password": "password",
+    "department": "Science",
+    "courseOfStudy": "Physics",
+    "level": "200",
+    "role": "tutor"
+}
+
+### Login
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+    "email": "gideon@meyou.com",
+    "password": "password"
+}
+
+### Get all users
+GET http://localhost:8080/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjYwMjA0MSwiZXhwIjoxNzE2Njg4NDQxfQ.Fab5_lz-5q95r8GQFzxyInPO0nwtsjcKzfBYZTugZ4A
+
+
+### Get User
+GET http://localhost:8080/api/users/664cdb369c7f76dcc94c9caf
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGVjMjVhZWQ2NTVlNTE5YzM3Y2U4OSIsInR5cGUiOiJ0dXRvciIsImlhdCI6MTcxNjQ4ODQzNSwiZXhwIjoxNzE2NTc0ODM1fQ.BvAvvy2WOa_SIIjrv9JwKYVItTWusWC-QYXtbbuAHfs
+
+
+### Put User
+PUT http://localhost:8080/api/users/664cdd8166b966c592ff0f28
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGNlMTc4YWYwNTdiYmZlNDRlZjIwNyIsImlhdCI6MTcxNjUxNDY2OCwiZXhwIjoxNzE2NjAxMDY4fQ.h19FjnEl5tUOWr8NpK90AlDMsc8RF7CQRipvgaHj5kw
+
+{
+    "name": "Funom Bature",
+    "department": "Computer Engineering",
+    "courseOfStudy": "Computer Engineering",
+    "level": "200",
+    "type": "tutor"
+
+}
+
+### Delete User
+DELETE http://localhost:8080/api/users/664ec25aed655e519c37ce89
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGVjMjVhZWQ2NTVlNTE5YzM3Y2U4OSIsInR5cGUiOiJ0dXRvciIsImlhdCI6MTcxNjQ4ODQzNSwiZXhwIjoxNzE2NTc0ODM1fQ.BvAvvy2WOa_SIIjrv9JwKYVItTWusWC-QYXtbbuAHfs
+
+
+
+### Get all tutors
+GET http://localhost:8080/api/tutors
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjYwMjA0MSwiZXhwIjoxNzE2Njg4NDQxfQ.Fab5_lz-5q95r8GQFzxyInPO0nwtsjcKzfBYZTugZ4A
+
+### Get Tutor
+GET http://localhost:8080/api/tutors/6650b21ffc53518a138e462a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjU2NDUyMCwiZXhwIjoxNzE2NjUwOTIwfQ.S4ctpnPrnjkevdxqSq5Dsn4rQjDwRQJSMO1vml9o2bQ
+
+
+### Update Tutor
+PUT http://localhost:8080/api/tutors/6650b21ffc53518a138e462a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjU2NDUyMCwiZXhwIjoxNzE2NjUwOTIwfQ.S4ctpnPrnjkevdxqSq5Dsn4rQjDwRQJSMO1vml9o2bQ
+
+{
+    "availability": ["Monday 9-11", "Tuesday 9-11", "Wednesday 9-11", "Thursday 9-11", "Friday 9-11"],
+    "courses": ["GST111", "FST111"]
+
+}
+
+### Delete Tutor
+DELETE http://localhost:8080/api/tutors/664fb1ceb60bbb4af6304131
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGNlMTc4YWYwNTdiYmZlNDRlZjIwNyIsImlhdCI6MTcxNjQ5ODA5OSwiZXhwIjoxNzE2NTg0NDk5fQ.abvKwtFjC96ntqRzQlaYuF7obpV5a73ie0Qv50yUMVE
+
+
+### Create Course
+POST http://localhost:8080/api/courses
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGNlMTc4YWYwNTdiYmZlNDRlZjIwNyIsImlhdCI6MTcxNjU0OTM0MCwiZXhwIjoxNzE2NjM1NzQwfQ.AvZ_3sko_V3ZdUDHoBCn67drWyznZDZXLSxS9SDJJGo
+
+{
+    "name": "Introduction to Food Science",
+    "courseCode": "FST111"
+
+}
+
+### Get all courses
+GET http://localhost:8080/api/courses
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjYwMjA0MSwiZXhwIjoxNzE2Njg4NDQxfQ.Fab5_lz-5q95r8GQFzxyInPO0nwtsjcKzfBYZTugZ4A
+
+### Get Course
+GET http://localhost:8080/api/courses/66505d5321de43cb75d303b4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGNlMTc4YWYwNTdiYmZlNDRlZjIwNyIsImlhdCI6MTcxNjU0OTM0MCwiZXhwIjoxNzE2NjM1NzQwfQ.AvZ_3sko_V3ZdUDHoBCn67drWyznZDZXLSxS9SDJJGo
+
+
+### Update Course
+PUT http://localhost:8080/api/courses/665001eb95127ff957b1c3dc
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGNlMTc4YWYwNTdiYmZlNDRlZjIwNyIsImlhdCI6MTcxNjU0MjM4MywiZXhwIjoxNzE2NjI4NzgzfQ.q3uBueabU2kpVGnYMXYtc_JR72IzkHrbVBHixxlGanI
+
+{
+    "name": "Introduction to Food Science and Technology",
+    "courseCode": "fst 111"
+
+}
+
+### Delete Course
+DELETE http://localhost:8080/api/courses/665001eb95127ff957b1c3dc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NGNlMTc4YWYwNTdiYmZlNDRlZjIwNyIsImlhdCI6MTcxNjU0MjM4MywiZXhwIjoxNzE2NjI4NzgzfQ.q3uBueabU2kpVGnYMXYtc_JR72IzkHrbVBHixxlGanI
+
+
+
+### Create Review
+POST http://localhost:8080/api/reviews
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjYwMjA0MSwiZXhwIjoxNzE2Njg4NDQxfQ.Fab5_lz-5q95r8GQFzxyInPO0nwtsjcKzfBYZTugZ4A
+
+{
+    "learner_id": "665087e522671bc004fe72f4", 
+    "tutor_id": "664fb173275fe31d2694ab65",
+    "rating": 5,
+    "comment": "I recommend Him for physics and chemistry courses"
+}
+
+### Get all Reviews
+GET http://localhost:8080/api/reviews
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjYwMjA0MSwiZXhwIjoxNzE2Njg4NDQxfQ.Fab5_lz-5q95r8GQFzxyInPO0nwtsjcKzfBYZTugZ4A
+
+### Get Review
+GET http://localhost:8080/api/reviews/665094b1a7630154aaf59d43
+
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTA4N2U1MjI2NzFiYzAwNGZlNzJmNCIsImlhdCI6MTcxNjU1MzcxOSwiZXhwIjoxNzE2NjQwMTE5fQ.LEi_j6ZHkfpGWSdRA0ZxOYkIb2xIQyiPLQZFGMPb1zM
+
+
+### Create Booking
+POST http://localhost:8080/api/bookings
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjU2NDUyMCwiZXhwIjoxNzE2NjUwOTIwfQ.S4ctpnPrnjkevdxqSq5Dsn4rQjDwRQJSMO1vml9o2bQ
+
+{
+    "learner_id": "665087e522671bc004fe72f4",
+    "tutor_id": "6650b21ffc53518a138e462a",
+    "course_id": "66507dbb22671bc004fe72ee",
+    "time_slot": "Moday 10:00 AM - 11:00 AM",
+    "status": "pending"
+}
+
+### Get all Bookings
+GET http://localhost:8080/api/bookings
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjYwMjA0MSwiZXhwIjoxNzE2Njg4NDQxfQ.Fab5_lz-5q95r8GQFzxyInPO0nwtsjcKzfBYZTugZ4A
+
+### Get Booking
+GET http://localhost:8080/api/bookings/6650b4d43f2915f097fe2381
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTBiMjFmZmM1MzUxOGExMzhlNDYyOCIsImlhdCI6MTcxNjU2NDUyMCwiZXhwIjoxNzE2NjUwOTIwfQ.S4ctpnPrnjkevdxqSq5Dsn4rQjDwRQJSMO1vml9o2bQ
+
+
+### Update Booking
+PUT http://localhost:8080/api/bookings/6650b4d43f2915f097fe2381
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTA4N2U1MjI2NzFiYzAwNGZlNzJmNCIsImlhdCI6MTcxNjU2NDAxOSwiZXhwIjoxNzE2NjUwNDE5fQ.9kGAiSdLzIBCDEe0zbXS2XwCmtkd3ihuLmI-yreTaSQ
+
+{
+    "time_slot": "Friday 10:00 AM - 11:00 AM",
+    "status": "confirmed"
+}
